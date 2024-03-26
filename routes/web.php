@@ -6,6 +6,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/feedback', function () {
+Route::get('/ulasan', function () {
     return view('sistem-umpan-balik');
 });
