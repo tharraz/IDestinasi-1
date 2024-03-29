@@ -21,5 +21,5 @@
         <div class="mt-4 text-center">
             <p>Already have an account? <a href="/login" class="text-success">Sign In</a></p>
         </div>
-    </div>
+    </div> 
     @endsection
