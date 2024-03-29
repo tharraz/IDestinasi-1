@@ -1,26 +1,57 @@
-@extends('layout.login')
-  @section('content')
- <div class="logo-space d-flex align-items-center justify-content-center">
-        <img src="{{url('asset/front-end/image/logo-perusahaan.jpg')}}" alt="logo-perusahaan" width="130" height="48">
-        <h3 class="ms-3">Mulai Perjalanan Wisatamu</h3>
-        <h2 class="ms-3">Masukkan detail untuk membuat akun dan pilih peranmu!</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <h2><span>J</span>elajah</h2>
     </div>
-    <div class="container register-container bg-white rounded p-5" style="max-width: 500px; max-height: 600px; margin: 125px auto;">
-        <h2 class="text-center mb-5">Register</h2>
-        <form action="" method="POST">
-            @csrf
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">username</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" required placeholder="username">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputPassword1" name="email" required placeholder="email">
-            </div>
-            <button type="submit" class="btn btn-success btn-block w-100">Next</button>
-        </form>
-        <div class="mt-4 text-center">
-            <p>Already have an account? <a href="/login" class="text-success">Sign In</a></p>
+    <div class="wrapper">
+      <form action="">
+        <h2>Hai! Mulailah sekarang <span>👋</span></h2>
+        <p>Masukkan Detail untuk Membuat Akun</p>
+        <center>
+          <a class="google" href="#"
+            ><img src="img/google.png" />Lanjutkan dengan Google</a
+          >
+          <p class="or">atau</p>
+        </center>
+        <div class="input-box">
+          <input type="text" required />
+          <label>Nama lengkap</label>
         </div>
+        <div class="input-box">
+          <input type="email" required />
+          <label>Alamat email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" required />
+          <label>Kata sandi</label>
+        </div>
+        <div class="input-box">
+          <input type="password" required />
+          <label>Konfirmasi sandi</label>
+        </div>
+
+        <button type="submit" class="btn">Daftar</button>
+
+        <div class="register">
+          <p>Sudah memiliki akun? <a href="login.html">Masuk ke akun</a></p>
+        </div>
+      </form>
     </div>
-    @endsection
+  </body>
+</html>
+
+
+  
