@@ -35,16 +35,17 @@
 <body>
 	<div class="container">
 		<div class="img">
-			<img src="81f32e54615ba4c21b72403afd2d672c81f32e54615ba4c21b72403afd2d672c.png" width="1000" height="900">
+			<img src="./asset/81f32e54615ba4c21b72403afd2d672c81f32e54615ba4c21b72403afd2d672c.png" width="1000" height="900">
               <div class="logo">
-                <img src="./img/logo.png" alt="easyclass" />
-                <h4>easyclass</h4>
+                <img src="./asset/logoIDestinasi.png" alt="idestinasi" />
+                <h4>iDestinasi</h4>
               </div>
 		</div>
 		<div class="login-content">
 			<form action="index.html">
 				<img src="img/avatar.svg">
-				<h2 class="title">Selamat Datang</h2>
+				<h2 class="title">Selamat Datang <span>👋</span></h2>
+				<h3>Lanjutkan dengan Google atau Masukkan Detail Login</h3>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
@@ -63,8 +64,9 @@
            		    	<input type="password" class="input">
             	   </div>
             	</div>
-            	<input type="submit" class="btn" value="Login">
-              <a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Masuk">
+				<small>Belum punya akun? <a href="#">Buat Akun</a></small>
+				<button class="btn btn-lg btn-light w-100 fs-6"><img src="images/google.png" style="width:20px" class="me-2"><small>Lanjutkan dengan Google</small></button>
             </form>
         </div>
     </div>
@@ -76,7 +78,7 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     overflow: hidden;
 }
 
