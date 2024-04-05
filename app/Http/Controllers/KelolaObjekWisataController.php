@@ -31,15 +31,15 @@ class KelolaObjekWisataController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'namaWisata' => 'required',
+            'nama' => 'required',
             'lokasi' => 'required',
-            'kordinat' => 'required',
-            'jamOperasional' => 'required',
-            'jenisWisata' => 'required',
-            'namaTiket' => 'required',
-            'hargaTiket' => 'required',
-            'fotoWisata' => 'required',
-
+            'longitude' => 'required',
+            'latitude' => 'required',
+            'jamOp' => 'required',
+            'jenis' => 'required',
+            'Ntiket' => 'required',
+            'Htiket' => 'required',
+            'foto' => 'required',
         ]);
 
         KelolaObjekWisata::create($request->all());
@@ -69,14 +69,15 @@ class KelolaObjekWisataController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'namaWisata' => 'required',
+            'nama' => 'required',
             'lokasi' => 'required',
-            'kordinat' => 'required',
-            'jamOperasional' => 'required',
-            'jenisWisata' => 'required',
-            'namaTiket' => 'required',
-            'hargaTiket' => 'required',
-            'fotoWisata' => 'required',
+            'longitude' => 'required',
+            'latitude' => 'required',
+            'jamOp' => 'required',
+            'jenis' => 'required',
+            'Ntiket' => 'required',
+            'Htiket' => 'required',
+            'foto' => 'required',
         ]);
 
         $pengaturanObjekWisata = KelolaObjekWisata::findOrFail($id);

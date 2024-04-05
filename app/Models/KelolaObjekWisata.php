@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class KelolaObjekWisata extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['namaWisata', 'lokasi', 'kordinat', 'jamOperasional', 'jenisWisata', 'namaTiket', 'hargaTiket', 'fotoWisata'];
+    
+    protected $fillable = ['nama', 'lokasi', 'longitude', 'latitude', 'jamOp', 'jenis', 'Ntiket', 'Htiket', 'foto'];
 }
