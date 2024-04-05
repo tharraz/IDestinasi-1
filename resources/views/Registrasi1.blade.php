@@ -32,7 +32,7 @@
           <label>Alamat Email</label>
         </div>
         <div class="input-box">
-          <input type="password" required />
+          <input type="" required />
           <label>Kata sandi</label>
         </div>
         <div class="input-box">
