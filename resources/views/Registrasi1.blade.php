@@ -13,20 +13,14 @@
     <link rel="stylesheet" href="css/registrasi.css" />
   </head>
   <body>
-    <img src="{{url('asset/front-end/image/gambar-template-registrasi.png')}}" alt="gambar-template-regsitrasi" width="930" height="1,296">
+    <img src="{{url('asset/front-end/image/gambar-template-registrasi.png')}}" alt="gambar-template-registrasi" width="930" height="1,296">
     <div class="logo">
-    <img src="{{url('asset/front-end/image/Logo-Idestinasi.png')}}" alt="Logo-Idestinasi" width="164,93" height="54">
+    <img src="{{url('asset/front-end/image/logoidestinasi.png')}}" alt="logoidestinasi.png" width="164,93" height="54">
     </div>
     <div class="wrapper">
       <form action="">
         <h2>Mulai Perjalanan Wisatamu! <span>👋</span></h2>
         <p>Masukkan detail untuk membuat akun dan pilih peranmu!</p>
-        <center>
-          <a class="google" href="#"
-            ><img src="img/google.png" />Lanjutkan dengan Google</a
-          >
-          <p class="or">atau</p>
-        </center>
         <div class="input-box">
           <input type="text" required />
           <label>Alamat Email</label>
@@ -39,15 +33,25 @@
           <input type="password" required />
           <label>Konfirmasi sandi</label>
         </div>
-        <div class="input-box">
-          <button for="tombol">Pengelola Objek Wisata</button>
-          <button for="tombol">Wisatawan</button>
-        </div>
+        
+        <input type="option" id="option"  value="Pengelola objek wisata">
+        <label for="Pengelola objek wisata">Pengelola objek wisata</label><br>
+
+        <input type="option" id="option"  value="Wisatawan">
+        <label for="Wisatawan">Wisatawan</label><br>
+
 
         <button type="submit" class="btn">Daftar</button>
 
         <div class="register">
-          <p>Sudah memiliki akun? <a href="login.html">Masuk ke akun</a></p>
+          <p>Sudah memiliki akun? <a href="login.php">Masuk ke akun</a></p>
+          <center>
+          <a class="google" href="#"
+            ><img src="img/google.png" />Lanjutkan dengan Google</a
+          >
+          <p class="or">atau</p>
+        </center>
+        <div class="input-box">
         </div>
       </form>
     </div>
