@@ -11,10 +11,10 @@ use Illuminate\Support\Facades\Session;
 class authController extends Controller
 {
     public function login(){
-        return view('pages.login');
+        return view('login');
     }
     public function registrasi1(){
-        return view('pages.register');
+        return view('registrasi1');
     }
     // proses step 1
     public function processStep1(Request $request)
@@ -29,8 +29,8 @@ class authController extends Controller
        return redirect('/registrasi2');
     }
 
-    public function register2(){
-        return view('pages.register');
+    public function registrasi2(){
+        return view('registrasi2');
     }
     public function processStep2(Request $request)
     {
@@ -44,8 +44,8 @@ class authController extends Controller
         return redirect('/registrasi3');
     }
 
-    public function register3(){
-        return view('pages.register');
+    public function registrasi3(){
+        return view('registrasi3');
     }
     public function processStep3(Request $request)
     {
