@@ -14,7 +14,7 @@ class authController extends Controller
         return view('pages.login');
     }
     public function registrasi1(){
-        return view('pages.registrasi1');
+        return view('pages.register');
     }
     // proses step 1
     public function processStep1(Request $request)
@@ -30,7 +30,7 @@ class authController extends Controller
     }
 
     public function register2(){
-        return view('pages.registrasi2');
+        return view('pages.register');
     }
     public function processStep2(Request $request)
     {
@@ -45,7 +45,7 @@ class authController extends Controller
     }
 
     public function register3(){
-        return view('pages.registrasi-3');
+        return view('pages.register');
     }
     public function processStep3(Request $request)
     {
