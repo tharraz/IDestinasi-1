@@ -19,6 +19,8 @@ class administratorController extends Controller
         $update_verifikasi = 
     }
 
+}
+
     
 
   
