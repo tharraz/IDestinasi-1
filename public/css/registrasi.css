@@ -5,12 +5,33 @@
   }
   
   body {
+
     font-family: 'DM Sans', sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     background-image: url(../img/cover.png);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 900px;
+    height: 1,296px;
+  }
+  .container {
+      position: relative;
+      display: inline-block;
+    
+  }
+
+  .overlay {
+    top: 64px;
+    left: 64px;
+    gap: 0px;
+    opacity: 0px;
+
+  }
+  .overlay img {
+      display: block;
+      width: 164.93px;
+      height: 54px;
   }
   
   .logo {
@@ -64,8 +85,11 @@
   }
   
   .google img {
-    width: 30px;
-    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+
   }
   
   .wrapper .or {
@@ -129,6 +153,7 @@
     outline: none;
     font-size: 16px;
     font-weight: 300;
+
   }
   
   .wrapper .btn {
@@ -156,11 +181,10 @@
   }
   
   .register a {
-    color: #0095f6;
+    color: #FF7A00;
     text-decoration: none;
   }
   
   .register a:hover {
     text-decoration: underline;
   }
-  

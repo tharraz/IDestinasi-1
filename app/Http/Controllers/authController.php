@@ -13,8 +13,8 @@ class authController extends Controller
     public function login(){
         return view('login');
     }
-    public function registrasi1(){
-        return view('registrasi1');
+    public function register1(){
+        return view('register1');
     }
     // proses step 1
     public function processStep1(Request $request)
@@ -26,11 +26,11 @@ class authController extends Controller
         session(['Pengelola objek wisata' => $request->input('Pengelola objek wisata')]);
         session(['Wisatawan' => $request->input('Wisatawan')]);
 
-       return redirect('/registrasi2');
+       return redirect('/register2');
     }
 
-    public function registrasi2(){
-        return view('registrasi2');
+    public function register2(){
+        return view('register2');
     }
     public function processStep2(Request $request)
     {
@@ -41,11 +41,11 @@ class authController extends Controller
         session(['usia' => $request->input('usia')]);
         session(['jenis kelamin' => $request->input('jenis kelamin')]);
 
-        return redirect('/registrasi3');
+        return redirect('/register3');
     }
 
-    public function registrasi3(){
-        return view('registrasi3');
+    public function register3(){
+        return view('register3');
     }
     public function processStep3(Request $request)
     {

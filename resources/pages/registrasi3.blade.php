@@ -18,55 +18,53 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
     <link rel="stylesheet" href="css/registrasi.css" />
   </head>
   <body>
-    <img src="{{url('asset/cover.png')}}" alt="cover.png">
+    <img src="{{url('asset/cover.png')}}" alt="cover">
     <div class="logo">
+    
     </div>
     <div class="wrapper">
       <form action="">
-        <h2>Mulai Perjalanan Wisatamu! <span>👋</span></h2>
-        <p>Masukkan detail untuk membuat akun dan pilih peranmu!</p>
+        <h2>Selangkah Lebih Dekat</h2>
+        <p>Lengkapi data dirimu untuk mulai bersama Kami</p>
+        
         <div class="input-box">
           <input type="text" required />
-          <label>Alamat Email</label>
+          <label>Nama Lengkap</label>
         </div>
         <div class="input-box">
-          <input type="" required />
-          <label>Kata sandi</label>
+          <input type="number" required />
+          <label>Nomor Telepon</label>
         </div>
         <div class="input-box">
-          <input type="password" required />
-          <label>Konfirmasi sandi</label>
+          <input type="text" required />
+          <label>Tempat Tinggal</label>
         </div>
-      
+        <div class="input-box">
+          <input type="number" required />
+          <label>Usia</label>
+        </div>
+        
         <div class="form-check form-check-inline">
+          <label>Jenis Kelamin</label>
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-          <label class="form-check-label" for="inlineRadio1">Pengelola objek wisata</label>
+          <label class="form-check-label" for="inlineRadio1">Pria</label>
         </div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-          <label class="form-check-label" for="inlineRadio2">Wisatawan</label>
+          <label class="form-check-label" for="inlineRadio2">Wanita</label>
           
         </div>
-        
-        <button type="submit" class="btn">Daftar</button>
 
-        <div class="register">
-          <p>Sudah memiliki akun? <strong><a href="login.php">Masuk ke akun</strong></a></p>
-          
-          <p class="or">atau</p>
-        
-          <img src="{{url('asset/google.png')}}" alt="google.png">
-          <center>
-          <a class="google" href="#"
-          alt="google.png">Lanjutkan dengan Google</a 
-          </center>
-        </div>
+        <button type="submit" class="btn">Daftar Sekarang</button>
+
       </form>
     </div>
   </body>
 </html>
+
 
 @endsection

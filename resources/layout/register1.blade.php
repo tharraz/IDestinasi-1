@@ -1,6 +1,3 @@
-@extends(layouts.main)
-
-@section(‘container’)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <title>Bootstrap Example</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/registrasi.css" />
   </head>
   <body>
     <img src="{{url('asset/cover.png')}}" alt="cover.png">
     <div class="logo">
+    <img src="{{url('asset/logoidestinasi.png')}}" alt="logoidestinasi.png">
     </div>
     <div class="wrapper">
       <form action="">
@@ -42,24 +36,25 @@
         </div>
       
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-          <label class="form-check-label" for="inlineRadio1">Pengelola objek wisata</label>
+          <br>
+          <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+          <label class="form-check-label" for="inlineCheckbox1">Pengelola objek wisata</label>
         </div>
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-          <label class="form-check-label" for="inlineRadio2">Wisatawan</label>
-          
+          <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2">
+          <label class="form-check-label" for="inlineCheckbox2">Wisatawan</label>
+          </br>
         </div>
         
         <button type="submit" class="btn">Daftar</button>
 
         <div class="register">
-          <p>Sudah memiliki akun? <strong><a href="login.php">Masuk ke akun</strong></a></p>
+          <p>Sudah memiliki akun? <a href="login.php">Masuk ke akun</a></p>
           
           <p class="or">atau</p>
-        
-          <img src="{{url('asset/google.png')}}" alt="google.png">
+         
           <center>
+          <img src="{{url('asset/google.png')}}" alt="google.png">
           <a class="google" href="#"
           alt="google.png">Lanjutkan dengan Google</a 
           </center>
@@ -69,4 +64,6 @@
   </body>
 </html>
 
-@endsection
+
+
+  

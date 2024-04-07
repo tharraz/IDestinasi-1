@@ -1,6 +1,4 @@
-@extends(layouts.main)
 
-@section(‘container’)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +49,7 @@
           
         </div>
         
-        <button type="submit" class="btn">Daftar</button>
+        <a href="/authController/register2" class="btn">Daftar</a>
 
         <div class="register">
           <p>Sudah memiliki akun? <strong><a href="login.php">Masuk ke akun</strong></a></p>
@@ -69,4 +67,6 @@
   </body>
 </html>
 
-@endsection
+
+
+  
