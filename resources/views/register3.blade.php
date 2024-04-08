@@ -1,6 +1,4 @@
-@extends(layouts.main)
 
-@section(‘container’)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -35,4 +33,3 @@
   </body>
 </html>
 
-@endsection
