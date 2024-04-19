@@ -30,6 +30,7 @@ class KelolaObjekWisataController extends Controller
      */
     public function store(Request $request)
     {
+        
         $request->validate([
             'nama' => 'required',
             'lokasi' => 'required',
@@ -39,10 +40,28 @@ class KelolaObjekWisataController extends Controller
             'jenis' => 'required',
             'Ntiket' => 'required',
             'Htiket' => 'required',
-            'foto' => 'required',
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Menambahkan validasi untuk gambar
         ]);
-
-        KelolaObjekWisata::create($request->all());
+    
+        // Menyimpan gambar ke direktori penyimpanan dengan sub-direktori 'post-images'
+        $imagePath = $request->file('foto')->store('post-images', 'public');
+    
+        // Mengambil nama file gambar saja
+        $imageName = basename($imagePath);
+    
+        // Membuat entri baru dalam database
+        KelolaObjekWisata::create([
+            'nama' => $request->nama,
+            'lokasi' => $request->lokasi,
+            'longitude' => $request->longitude,
+            'latitude' => $request->latitude,
+            'jamOp' => $request->jamOp,
+            'jenis' => $request->jenis,
+            'Ntiket' => $request->Ntiket,
+            'Htiket' => $request->Htiket,
+            'foto' => $imageName, // Menyimpan hanya nama file gambar
+        ]);
+    
         return redirect()->route('kelola-objek-wisata.index')->with('success', 'Data berhasil disimpan!');
     }
 
@@ -77,11 +96,25 @@ class KelolaObjekWisataController extends Controller
             'jenis' => 'required',
             'Ntiket' => 'required',
             'Htiket' => 'required',
-            'foto' => 'required',
+            'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         $pengaturanObjekWisata = KelolaObjekWisata::findOrFail($id);
-        $pengaturanObjekWisata->update($request->all());
+
+        $imagePath = $request->file('foto')->store('post-images', 'public');
+        $imageName = basename($imagePath);
+
+        $pengaturanObjekWisata->update([
+            'nama' => $request->nama,
+            'lokasi' => $request->lokasi,
+            'longitude' => $request->longitude,
+            'latitude' => $request->latitude,
+            'jamOp' => $request->jamOp,
+            'jenis' => $request->jenis,
+            'Ntiket' => $request->Ntiket,
+            'Htiket' => $request->Htiket,
+            'foto' => $imageName,
+        ]);
 
         return redirect()->route('kelola-objek-wisata.index')->with('success', 'Data berhasil diperbarui!');
     }
