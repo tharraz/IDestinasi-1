@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Informasi Umum</div>
                     <div class="card-body">
-                        <form action="{{ route('kelola-objek-wisata.store') }}" method="POST">
+                        <form method="POST" action="{{ route('kelola-objek-wisata.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="row g-2">
                                 <label for="nama">Nama Objek Wisata</label>
