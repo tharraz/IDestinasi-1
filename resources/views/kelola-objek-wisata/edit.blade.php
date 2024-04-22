@@ -11,8 +11,8 @@
                             @csrf
                             @method('PUT')
                             <div class="row g-2">
-                                <label for="nama">Nama Objek Wisata</label>
-                                <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukkan Nama Objek Wisata" value="{{ $pengaturanObjekWisata->nama }}" required>
+                                <label for="nama_destinasi">Nama Objek Wisata</label>
+                                <input type="text" class="form-control" name="nama_destinasi" id="nama_destinasi" placeholder="Masukkan Nama Objek Wisata" value="{{ $pengaturanObjekWisata->nama_destinasi }}" required>
                             </div>
                             <div class="row g-2">
                                 <label for="lokasi">Lokasi</label>
@@ -29,8 +29,8 @@
                                 </div>
                             </div>
                             <div class="form-row g-1">
-                                <label for="jamOp">Jam Operasional</label>
-                                <input type="text" class="form-control" name="jamOp" id="jamOp" placeholder="Masukkan Jam Operasional Objek Wisata" value="{{ $pengaturanObjekWisata->jamOp }}" required>
+                                <label for="jam_operasional">Jam Operasional</label>
+                                <input type="text" class="form-control" name="jam_operasional" id="jam_operasional" placeholder="Masukkan Jam Operasional Objek Wisata" value="{{ $pengaturanObjekWisata->jam_operasional }}" required>
                             </div>
                             
                             <div class="form-row g-1">
@@ -38,12 +38,12 @@
                                 <input type="text" class="form-control" name="jenis" id="jenis" placeholder="Masukkan Jenis Wisata" value="{{ $pengaturanObjekWisata->jenis }}" required>
                             </div>
                             <div class="form-row g-1">
-                                <label for="Ntiket">Nama Tiket</label>
-                                <input type="text" class="form-control" name="Ntiket" id="Ntiket" placeholder="Masukkan Nama Tiket Objek Wisata" value="{{ $pengaturanObjekWisata->Ntiket }}" required>
+                                <label for="nama_tiket">Nama Tiket</label>
+                                <input type="text" class="form-control" name="nama_tiket" id="nama_tiket" placeholder="Masukkan Nama Tiket Objek Wisata" value="{{ $pengaturanObjekWisata->nama_tiket }}" required>
                             </div>
                             <div class="form-row g-1">
-                                <label for="Htiket">Harga Tiket</label>
-                                <input type="text" class="form-control" name="Htiket" id="Htiket" placeholder="Masukkan Harga Tiket Objek Wisata" value="{{ $pengaturanObjekWisata->Htiket }}" required>
+                                <label for="harga_tiket">Harga Tiket</label>
+                                <input type="text" class="form-control" name="harga_tiket" id="harga_tiket" placeholder="Masukkan Harga Tiket Objek Wisata" value="{{ $pengaturanObjekWisata->harga_tiket }}" required>
                             </div>
                             <div class="form-row g-1">
                                 
