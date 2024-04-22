@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KelolaObjekWisata;
+use App\Models\ObjekWisata;
 use Illuminate\Http\Request;
 
 
@@ -13,7 +13,7 @@ class KelolaObjekWisataController extends Controller
      */
     public function index()
     {
-        $pengaturanObjekWisatas = KelolaObjekWisata::all();
+        $pengaturanObjekWisatas = ObjekWisata::all();
         return view('kelola-objek-wisata.index', compact('pengaturanObjekWisatas'));
     }
 
@@ -32,14 +32,14 @@ class KelolaObjekWisataController extends Controller
     {
         
         $request->validate([
-            'nama' => 'required',
+            'nama_destinasi' => 'required',
             'lokasi' => 'required',
             'longitude' => 'required',
             'latitude' => 'required',
-            'jamOp' => 'required',
+            'jam_operasional' => 'required',
             'jenis' => 'required',
-            'Ntiket' => 'required',
-            'Htiket' => 'required',
+            'nama_tiket' => 'required',
+            'harga_tiket' => 'required',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Menambahkan validasi untuk gambar
         ]);
     
@@ -50,15 +50,15 @@ class KelolaObjekWisataController extends Controller
         $imageName = basename($imagePath);
     
         // Membuat entri baru dalam database
-        KelolaObjekWisata::create([
-            'nama' => $request->nama,
+        ObjekWisata::create([
+            'nama_destinasi' => $request->nama_destinasi,
             'lokasi' => $request->lokasi,
             'longitude' => $request->longitude,
             'latitude' => $request->latitude,
-            'jamOp' => $request->jamOp,
+            'jam_operasional' => $request->jam_operasional,
             'jenis' => $request->jenis,
-            'Ntiket' => $request->Ntiket,
-            'Htiket' => $request->Htiket,
+            'nama_tiket' => $request->nama_tiket,
+            'harga_tiket' => $request->harga_tiket,
             'foto' => $imageName, // Menyimpan hanya nama file gambar
         ]);
     
@@ -68,7 +68,7 @@ class KelolaObjekWisataController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(KelolaObjekWisata $pengaturanObjekWisata)
+    public function show(ObjekWisata $pengaturanObjekWisata)
     {
         //
     }
@@ -78,7 +78,7 @@ class KelolaObjekWisataController extends Controller
      */
     public function edit($id)
     {
-        $pengaturanObjekWisata = KelolaObjekWisata::findOrFail($id);
+        $pengaturanObjekWisata = ObjekWisata::findOrFail($id);
         return view('kelola-objek-wisata.edit', compact('pengaturanObjekWisata'));
     }
 
@@ -88,31 +88,31 @@ class KelolaObjekWisataController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required',
+            'nama_destinasi' => 'required',
             'lokasi' => 'required',
             'longitude' => 'required',
             'latitude' => 'required',
-            'jamOp' => 'required',
+            'jam_operasional' => 'required',
             'jenis' => 'required',
-            'Ntiket' => 'required',
-            'Htiket' => 'required',
+            'nama_tiket' => 'required',
+            'harga_tiket' => 'required',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $pengaturanObjekWisata = KelolaObjekWisata::findOrFail($id);
+        $pengaturanObjekWisata = ObjekWisata::findOrFail($id);
 
         $imagePath = $request->file('foto')->store('post-images', 'public');
         $imageName = basename($imagePath);
 
         $pengaturanObjekWisata->update([
-            'nama' => $request->nama,
+            'nama_destinasi' => $request->nama_destinasi,
             'lokasi' => $request->lokasi,
             'longitude' => $request->longitude,
             'latitude' => $request->latitude,
-            'jamOp' => $request->jamOp,
+            'jam_operasional' => $request->jam_operasional,
             'jenis' => $request->jenis,
-            'Ntiket' => $request->Ntiket,
-            'Htiket' => $request->Htiket,
+            'nama_tiket' => $request->nama_tiket,
+            'harga_tiket' => $request->harga_tiket,
             'foto' => $imageName,
         ]);
 
@@ -124,7 +124,7 @@ class KelolaObjekWisataController extends Controller
      */
     public function destroy($id)
     {
-        $pengaturanObjekWisata = KelolaObjekWisata::findOrFail($id);
+        $pengaturanObjekWisata = ObjekWisata::findOrFail($id);
         $pengaturanObjekWisata->delete();
 
         return redirect()->route('kelola-objek-wisata.index')->with('success', 'Data berhasil dihapus!');

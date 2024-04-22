@@ -10,8 +10,8 @@
             @foreach($pengaturanObjekWisatas as $pengaturanObjekWisata)
                 <div class="col-md-4">
                     <img src="{{ asset('storage/post-images/' . $pengaturanObjekWisata->foto) }}" class="img-fluid rounded mb-3" alt="{{ $pengaturanObjekWisata->nama }}">
-                    <h4>{{ $pengaturanObjekWisata->nama }}</h4>
-                    <h4>{{ $pengaturanObjekWisata->Htiket }}</h4>
+                    <h4>{{ $pengaturanObjekWisata->nama_destinasi }}</h4>
+                    <h4>{{ $pengaturanObjekWisata->harga_tiket }}</h4>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <a href="{{ route('kelola-objek-wisata.edit', $pengaturanObjekWisata->id) }}" class="btn btn-primary">Edit</a>
                         <form action="{{ route('kelola-objek-wisata.destroy', $pengaturanObjekWisata->id) }}" method="POST">
